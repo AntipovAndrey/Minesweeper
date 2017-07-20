@@ -16,13 +16,13 @@ public class MinesGame {
 
     public boolean guessMine(int x, int y) {
         if (firstClick) return false;
-        gameField.setMine(x, y);
+        gameField.setFlag(x, y);
         return true;
     }
 
     public boolean unFlag(int x, int y) {
         if (firstClick) return false;
-        gameField.unsetMine(x, y);
+        gameField.unsetFlag(x, y);
         return true;
     }
 

@@ -10,7 +10,6 @@ public class GameField {
     enum Cell {
         MINE, FLAG, EMPTY(-1), OPENED, N1(1), N2(2), N3(3), N4(4), N5(5), N6(6), N7(7), N8(8), N9(9);
 
-        private Map<Integer, Cell> numbers;
         private int intValue;
 
         Cell() {
@@ -168,7 +167,7 @@ public class GameField {
                 y + dy >= field.length || x + dx >= field[0].length);
     }
 
-    boolean setMine(int x, int y) {
+    boolean setFlag(int x, int y) {
         if (flagsOnField == TOTAL_MINES_COUNT) return false;
         flagsOnField++;
         boolean guessed = field[y][x] == Cell.MINE;
@@ -179,7 +178,7 @@ public class GameField {
         return true;
     }
 
-    void unsetMine(int x, int y) {
+    void unsetFlag(int x, int y) {
         field[y][x] = bufferForUnflag[y][x];
         userField[y][x] = 'C';
         flagsOnField--;
