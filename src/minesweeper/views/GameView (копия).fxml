@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="510.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="minesweeper.controllers.GameController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <GridPane fx:id="gridField" alignment="CENTER" prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="5.0" top="20.0" />
+               </padding></GridPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="420.0" prefWidth="173.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#replay" prefHeight="45.0" prefWidth="150.0" text="Начать сначала" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="186.0" prefWidth="154.0" spacing="20.0">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <ImageView fx:id="flagImage" fitHeight="48.0" fitWidth="48.0" layoutX="54.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="11.0" />
+                              <Label fx:id="flagsLabel" alignment="CENTER" layoutX="43.0" layoutY="66.0" prefHeight="13.0" prefWidth="66.0" text="1/5" textAlignment="CENTER" textFill="#363636">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane>
+                           <children>
+                              <ImageView fx:id="clockImage" fitHeight="48.0" fitWidth="48.0" layoutX="53.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="11.0" />
+                              <Label fx:id="timeLabel" alignment="CENTER" layoutX="42.0" layoutY="67.0" prefHeight="20.0" prefWidth="68.0" text="00:00" textFill="#434343">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
